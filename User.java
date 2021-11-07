@@ -1,13 +1,27 @@
 
-package perpustakaan;
-
 // induk class
-public interface User {
-    public void setNama(String nama);
-    public void setAlamat(String alamat);
-    public void setTelepon(String telepon);
+public class User {
+    void setNama(String nama){
+        System.out.println(nama);
+    }
 
-    public String getNama(int id);
-    public String getAlamat(int id);
-    public String getTelepon(int id);
+    void setAlamat(String Alamat){
+        System.out.println(Alamat);
+    }
+
+    void setTelepon(String telp){
+        System.out.println(telp);
+    }
+
+    String getNama(int ID){
+        return null;
+    }
+
+    String getAlamat(int ID){
+        return null;
+    }
+
+    String getTelepon(int ID){
+        return null;
+    }
 }

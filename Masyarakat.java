@@ -1,59 +1,58 @@
 import java.util.ArrayList;
 
 // implementasi inherintace
-public class Petugas extends User{
-
-    private ArrayList<String> namaPetugas = new ArrayList<String>();
+public class Masyarakat extends User{
+    private ArrayList<String> namaMasyarakat = new ArrayList<String>();
     private ArrayList<String> alamat = new ArrayList<String>();
     private ArrayList<String> telepon = new ArrayList<String>();
+    private ArrayList<Integer> idMasyarakat = new ArrayList<Integer>();
 
-    public void doYourJob(Barang barang){
-        System.out.print("Nama Barang : ");
-        barang.addNamaBarang();
-        System.out.print("Harga Awal Barang : ");
-        barang.addHargaAwal();
-        barang.setStatus(true);
-    }
-
-    public Petugas(String nama, String alamat, String telp){
+    public void Masyarakat(String nama, String alamat, String telp){
         setNama(nama);
         setAlamat(alamat);
         setTelepon(telp);
+        setIdMasyarakat(namaMasyarakat.indexOf(nama));
+    }
+
+    public int getIndexFromName(String nama){
+        return namaMasyarakat.indexOf(nama);
+    }
+    public int getIdMasyarakat(int id) {
+        return idMasyarakat.get(id);
+    }
+
+    public void setIdMasyarakat(int id) {
+        this.idMasyarakat.add(id);
     }
     
-    // membuat ulang method pada sub-class
     @Override
     public void setNama(String nama) {
-        this.namaPetugas.add(nama);
+        this.namaMasyarakat.add(nama);
     }
-    
-    // membuat ulang method pada sub-class
+
     @Override
     public void setAlamat(String Alamat) {
         this.alamat.add(Alamat);
     }
-    
-    // membuat ulang method pada sub-class
+
     @Override
     public void setTelepon(String telp) {
         this.telepon.add(telp);
     }
-    
-    // membuat ulang method pada sub-class
+
     @Override
     public String getNama(int ID) {
-        return namaPetugas.get(ID);
+        return namaMasyarakat.get(ID);
     }
-    
-    // membuat ulang method pada sub-class
+
     @Override
     public String getAlamat(int ID) {
         return alamat.get(ID);
     }
-    
-    // membuat ulang method pada sub-class
+
     @Override
     public String getTelepon(int ID) {
         return alamat.get(ID);
     }
+
 }
